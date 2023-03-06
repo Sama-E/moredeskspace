@@ -20,7 +20,7 @@ const PostSchema = new mongoose.Schema(
         subcategory: {
             type: String,
             required:true,
-            minLength: 3
+            minLength: 2
         },
         tag: {
             type: String,
@@ -35,7 +35,7 @@ const PostSchema = new mongoose.Schema(
         body: {
             type: String,
             required:true,
-            minLength: 50,
+            minLength: 5,
         },
         author: {
             type: String,
@@ -43,10 +43,15 @@ const PostSchema = new mongoose.Schema(
         selectedFile: {
             type: String,
         },
-        likeCount: {
-            type: Number,
-            default: 0
-        }
+        userPicturePath: String,
+        likes: {
+            type: Map,
+            of: Boolean,
+        },
+        comments: {
+            type: Array,
+            default: [],
+        },
     }, {timestamp: true});
 
 const Post = mongoose.model("Post", PostSchema);

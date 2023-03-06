@@ -65,8 +65,8 @@ export const users = [
     },
     {
         _id: userIds[3],
-        firstName: "Whatcha",
-        lastName: "Doing",
+        firstName: "James",
+        lastName: "Cook",
         email: "whatchadoing@gmail.com",
         password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
         picturePath: "p6.jpeg",
@@ -154,17 +154,21 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[1],
-        firstName: "Steve",
-        lastName: "Ralph",
-        location: "New York, CA",
-        description: "Some really long random description",
-        picturePath: "post1.jpeg",
+        title: "Religion?",
+        subtitle: "One True Religion",
+        category: "Religion",
+        subcategory:"Faith",
+        tag: "something",
+        type: "blog",
+        author: "Steve Ralph",
+        body: "Some really long random description",
+        selectedFile: "post1.jpeg",
         userPicturePath: "p3.jpeg",
         likes: new Map([
-        [userIds[0], true],
-        [userIds[2], true],
-        [userIds[3], true],
-        [userIds[4], true],
+            [userIds[0], true],
+            [userIds[2], true],
+            [userIds[3], true],
+            [userIds[4], true],
         ]),
         comments: [
             "random comment",
@@ -175,12 +179,16 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[3],
-        firstName: "Whatcha",
-        lastName: "Doing",
-        location: "Korea, CA",
-        description:
-        "Another really long random description. This one is longer than the previous one.",
-        picturePath: "post2.jpeg",
+        title: "Big Muscles",
+        subtitle: "Synthetic Protiens",
+        category: "Health",
+        subcategory:"Fitness",
+        tag: "something",
+        type: "blog",
+        author: "James Cook",
+        body:
+            "Another really long random description. This one is longer than the previous one.",
+        selectedFile: "post2.jpeg",
         userPicturePath: "p6.jpeg",
         likes: new Map([
             [userIds[7], true],
@@ -198,12 +206,16 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[4],
-        firstName: "Jane",
-        lastName: "Doe",
-        location: "Utah, CA",
-        description:
+        title: "Missing for 3 decades",
+        subtitle: "Stranger than Fiction",
+        category: "Crimes",
+        subcategory:"Unsolved Mysteries",
+        tag: "something",
+        type: "blog",
+        author: "Jane Doe",
+        body:
             "This is the last really long random description. This one is longer than the previous one.",
-        picturePath: "post3.jpeg",
+        selectedFile: "post3.jpeg",
         userPicturePath: "p5.jpeg",
         likes: new Map([
             [userIds[1], true],
@@ -222,12 +234,16 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[5],
-        firstName: "Harvey",
-        lastName: "Dunn",
-        location: "Los Angeles, CA",
-        description:
+        title: "End of the World",
+        subtitle: "AI and Robotics",
+        category: "Computer Science",
+        subcategory:"AI",
+        tag: "something",
+        type: "blog",
+        author: "Harvey Dunn",
+        body:
             "This is the last really long random description. This one is longer than the previous one. Man I'm bored. I'm going to keep typing until I run out of things to say.",
-        picturePath: "post4.jpeg",
+        selectedFile: "post4.jpeg",
         userPicturePath: "p7.jpeg",
         likes: new Map([
             [userIds[1], true],
@@ -246,12 +262,16 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[6],
-        firstName: "Carly",
-        lastName: "Vowel",
-        location: "Chicago, IL",
-        description:
+        title: "New French Fries",
+        subtitle: "Fine Fast Food",
+        category: "Food",
+        subcategory:"Fast Food",
+        tag: "something",
+        type: "blog",
+        author: "Carly Vowel",
+        body:
             "Just a short description. I'm tired of typing. I'm going to play video games now.",
-        picturePath: "post5.jpeg",
+        selectedFile: "post5.jpeg",
         userPicturePath: "p8.jpeg",
         likes: new Map([
             [userIds[1], true],
@@ -270,18 +290,21 @@ export const posts = [
     {
         _id: new mongoose.Types.ObjectId(),
         userId: userIds[7],
-        firstName: "Jessica",
-        lastName: "Dunn",
-        location: "Washington, DC",
-        description:
-        "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
-        picturePath: "post6.jpeg",
+        title: "Something New",
+        subtitle: "New Tech",
+        category: "Computer Science",
+        subcategory:"VR",
+        tag: "something",
+        type: "blog",
+        author: "Jessica Dunn",
+        body:
+            "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
+        selectedFile: "post6.jpeg",
         userPicturePath: "p9.jpeg",
         likes: new Map([
             [userIds[1], true],
             [userIds[2], true],
         ]),
-
         comments: [
             "Can I play video games now?",
             "No let's actually study",
