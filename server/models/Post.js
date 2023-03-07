@@ -9,7 +9,6 @@ const PostSchema = new mongoose.Schema(
         },
         subtitle: {
             type: String,
-            required:true,
             minLength: 5,
         },
         category: {
@@ -19,7 +18,6 @@ const PostSchema = new mongoose.Schema(
         },
         subcategory: {
             type: String,
-            required:true,
             minLength: 2
         },
         tag: {
@@ -40,7 +38,7 @@ const PostSchema = new mongoose.Schema(
         author: {
             type: String,
         },
-        selectedFile: {
+        picturePath: {
             type: String,
         },
         userPicturePath: String,
