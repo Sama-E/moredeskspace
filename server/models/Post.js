@@ -1,46 +1,22 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const PostSchema = new mongoose.Schema(
+const PostSchema = mongoose.Schema(
     {
-        title: {
+        userId: {
             type: String,
-            required:true,
-            minLength: 5
+            required: true,
         },
-        subtitle: {
+        firstName: {
             type: String,
-            minLength: 5,
+            required: true,
         },
-        category: {
+        lastName: {
             type: String,
-            required:true,
-            minLength: 3
+            required: true,
         },
-        subcategory: {
-            type: String,
-            minLength: 2
-        },
-        tag: {
-            type: String,
-            required:true,
-            minLength: 3
-        },
-        type: {
-            type: String,
-            required:true,
-            minLength: 3
-        },
-        body: {
-            type: String,
-            required:true,
-            minLength: 5,
-        },
-        author: {
-            type: String,
-        },
-        picturePath: {
-            type: String,
-        },
+        location: String,
+        description: String,
+        picturePath: String,
         userPicturePath: String,
         likes: {
             type: Map,
@@ -50,7 +26,9 @@ const PostSchema = new mongoose.Schema(
             type: Array,
             default: [],
         },
-    }, {timestamp: true});
+    },
+    { timestamps: true }
+);
 
 const Post = mongoose.model("Post", PostSchema);
 
