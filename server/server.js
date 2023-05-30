@@ -46,7 +46,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-//CORS(Cross-Origin-Resource-Sharing): Determins if browsers block frontend JS code from accessing responses
+//CORS(Cross-Origin-Resource-Sharing): Determines if browsers block frontend JS code from accessing responses
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
